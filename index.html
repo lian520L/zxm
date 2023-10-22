@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<meta name="github-pages
+content="lian520L/lian520L.gitub.io" >
+<html>
+<head>
+    <title>账号密码登录</title>
+    <script>
+        function validateForm() {
+            var username = document.forms["loginForm"]["username"].value;
+            var password = document.forms["loginForm"]["password"].value;
+
+            // 在这里进行账号密码验证
+            if (username === "1314520" && password === "1314520") {
+                alert("登录成功");
+                window.location.href = "memories.html"; // 设置目标程序的 URL
+                return true;
+            } else {
+                alert("账号或密码不正确");
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>账号密码登录</h1>
+
+    <form name="loginForm" onsubmit="return validateForm()" method="post">
+        <label for="username">账号：</label>
+        <input type="text" id="username" name="username" required placeholder="请输入账号"><br>
+
+        <label for="password">密码：</label>
+        <input type="password" id="password" name="password" required placeholder="请输入密码"><br>
+
+        <input type="submit" value="登录">
+    </form>
+</body>
+</html>
